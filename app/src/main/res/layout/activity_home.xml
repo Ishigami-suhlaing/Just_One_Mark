@@ -8,11 +8,11 @@
     tools:context=".HomeActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
         android:padding="8dp"
-        style="@style/Text.Headline"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,18 +21,19 @@
 
         <TextView
             android:id="@+id/app_name_txt"
+            style="@style/Text.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:layout_gravity="center_horizontal"
+
             android:text="Just One Mark" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="8dp"
+            android:layout_margin="8dp"
             app:cardCornerRadius="8dp"
-            app:cardElevation="4dp">
+            app:cardElevation="8dp">
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -42,48 +43,56 @@
                     android:id="@+id/learning_hr_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
                     android:layout_gravity="center_horizontal"
                     android:text="You are leaning about 1 hr now!!" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/suprise_btn"
+                    android:id="@+id/surprise_btn"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Suprise"/>
+                    android:text="Surprise" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chapter_rv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="8dp"
             android:elevation="2dp"
-            android:padding="12dp"
-            android:layout_weight="1"
-            android:layout_marginBottom="8dp"/>
-</LinearLayout>
+            android:padding="12dp" />
+    </LinearLayout>
 
     <!-- Bottom Navigation CardView -->
-    <androidx.cardview.widget.CardView
+    <com.google.android.material.card.MaterialCardView
         android:id="@+id/bottom_nav_card"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         android:elevation="8dp"
         app:cardCornerRadius="24dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:background="@color/colorSurface"
-            app:itemIconTint="@color/colorPrimary"
+            app:itemIconTint="@color/colorPrimaryVariant"
             app:itemTextColor="@color/colorPrimary"
-            app:menu="@menu/bottom_nav_menu" />
-    </androidx.cardview.widget.CardView>
+            app:menu="@menu/bottom_nav_menu"
+            app:itemIconSize="24dp"
+            app:labelVisibilityMode="labeled"
+            app:itemTextAppearanceActive="@style/BottomNavText"
+            app:itemTextAppearanceInactive="@style/BottomNavText"/>
+
+
+    </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

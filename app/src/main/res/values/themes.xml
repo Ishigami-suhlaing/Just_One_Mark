@@ -1,13 +1,10 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
     <style name="Base.Theme.JustOneMark" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
         <item name="colorSecondary">@color/colorSecondary</item>
-        <item name="android:fontFamily">@font/nunito_medium</item>
+        <item name="android:fontFamily">@font/nuget_medium</item>
         <item name="android:textColor">@color/colorTextPrimary</item>
-<!--        <item name="android:buttonStyle">@style/Widget.JustOneMark.Button</item>-->
-<!--        <item name="android:textViewStyle">@stle/Widget.JustOneMark.TextView</item>-->
     </style>
 
     <style name="Theme.JustOneMark" parent="Base.Theme.JustOneMark" />

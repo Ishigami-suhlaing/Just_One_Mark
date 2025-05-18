@@ -6,14 +6,9 @@
     <item
         android:id="@+id/nav_mistakes"
         android:icon="@drawable/done_all"
-        android:title="Mistake" />
+        android:title="Review Mistake" />
     <item
         android:id="@+id/nav_important"
         android:icon="@drawable/star"
         android:title="Important" />
-
-    <item
-        android:id="@+id/nav_about_us"
-        android:icon="@drawable/rock"
-        android:title="About Us" />
 </menu>
