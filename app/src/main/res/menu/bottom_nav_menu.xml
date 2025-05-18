@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/home"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_mistakes"
+        android:icon="@drawable/done_all"
+        android:title="Mistake" />
+    <item
+        android:id="@+id/nav_important"
+        android:icon="@drawable/star"
+        android:title="Important" />
+
+    <item
+        android:id="@+id/nav_about_us"
+        android:icon="@drawable/rock"
+        android:title="About Us" />
+</menu>
