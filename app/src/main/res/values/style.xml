@@ -6,7 +6,7 @@
     </style>
 
     <style name="Text.Headline">
-        <item name="android:textSize">25sp</item>
+        <item name="android:textSize">21sp</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textColor">@color/colorTextPrimary</item>
         <item name="android:fontFamily">@font/nuget_bold</item>
@@ -25,9 +25,23 @@
     </style>
 
     <style name="Widget.BottomNav" parent="Widget.Material3.BottomNavigationView">
-        <item name="android:background">@color/colorSurface</item>
-        <item name="itemIconTint">@color/colorPrimary</item>
-        <item name="itemTextColor">@color/colorPrimary</item>
+        <item name="android:background">@color/colorPrimary</item>
+        <item name="itemIconTint">@color/colorSecondary</item>
+        <item name="itemTextColor">@color/colorSecondary</item>
+        <item name="itemIconSize">24sp</item>
+        <item name="itemIconPadding">0dp</item>
+
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:paddingBottom">0dp</item>
+    </style>
+
+
+    <style name="Widget.CardView" parent="Widget.MaterialComponents.CardView">
+        <item name="elevation">4dp</item>
+        <item name="cornerRadius">8dp</item>
+
     </style>
 
     <style name="Widget.JustOneMark.TextView" parent="Widget.AppCompat.TextView">
@@ -43,10 +57,13 @@
         <item name="backgroundTint">@color/colorPrimary</item>
     </style>
 
-    <style name="BottomNavText" parent="TextAppearance.AppCompat.Caption">
-        <item name="android:textSize">11sp</item>
-        <item name="android:paddingTop">0dp</item>
-        <item name="android:paddingBottom">0dp</item>
+    <style name="Top3Icon">
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_weight">1</item>
     </style>
+
+
+
 
 </resources>

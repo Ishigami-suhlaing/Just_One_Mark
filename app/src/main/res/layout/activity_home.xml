@@ -1,98 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".HomeActivity">
 
+    <!-- Top content -->
     <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        android:padding="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:orientation="horizontal">
         <TextView
             android:id="@+id/app_name_txt"
             style="@style/Text.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/app_name" />
+        
+        <ImageView
+            android:id="@+id/review_mistake_img"
+            style="@style/Top3Icon"
+            android:contentDescription="Review Mistake"
+            app:srcCompat="@drawable/bug" />
 
-            android:text="Just One Mark" />
+        <ImageView
+            android:id="@+id/important_img"
+            style="@style/Top3Icon"
+            android:contentDescription="Important"
+            app:srcCompat="@drawable/star_selected" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            app:cardCornerRadius="8dp"
-            app:cardElevation="8dp">
+        <ImageView
+            android:id="@+id/aboutus_img"
+            android:contentDescription="About Us"
+            style="@style/Top3Icon"
+            app:srcCompat="@drawable/stone" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/learning_hr_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:text="You are leaning about 1 hr now!!" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/surprise_btn"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Surprise" />
-
-            </LinearLayout>
-
-        </androidx.cardview.widget.CardView>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/chapter_rv"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
-            android:elevation="2dp"
-            android:padding="12dp" />
     </LinearLayout>
 
-    <!-- Bottom Navigation CardView -->
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/bottom_nav_card"
-        android:layout_width="0dp"
+    <ImageView
+        android:id="@+id/surprise_img"
+        android:layout_width="wrap_content"
+        android:layout_height="138dp"
+        app:srcCompat="@drawable/subscription" />
+
+    <TextView
+        android:id="@+id/learning_hr_txt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_margin="12dp"
-        android:clipChildren="false"
+        android:text="@string/learning_time" />
+
+
+    <!-- RecyclerView takes remaining space -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chapter_rv"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
         android:clipToPadding="false"
-        android:elevation="8dp"
-        app:cardCornerRadius="24dp"
+        android:elevation="2dp" />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@color/colorSurface"
-            app:itemIconTint="@color/colorPrimaryVariant"
-            app:itemTextColor="@color/colorPrimary"
-            app:menu="@menu/bottom_nav_menu"
-            app:itemIconSize="24dp"
-            app:labelVisibilityMode="labeled"
-            app:itemTextAppearanceActive="@style/BottomNavText"
-            app:itemTextAppearanceInactive="@style/BottomNavText"/>
-
-
-    </com.google.android.material.card.MaterialCardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

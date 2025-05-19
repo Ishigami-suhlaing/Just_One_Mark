@@ -2,9 +2,9 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorPrimary">#FF9F1C</color>
-    <color name="colorPrimaryVariant">#FFB347</color>
-    <color name="colorSecondary">#2EC4B6</color>
+    <color name="colorPrimary">#89E78D</color>
+    <color name="colorPrimaryVariant">#80ED78</color>
+    <color name="colorSecondary">#FFFFFF</color>
     <color name="colorBackground">#FFFDFB</color>
     <color name="colorSurface">#FFFFFF</color>
     <color name="colorTextPrimary">#212121</color>

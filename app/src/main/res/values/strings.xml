@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Just One Mark</string>
+    <string name="learning_time">You are learning about 1 min now!!</string>
+
 </resources>
