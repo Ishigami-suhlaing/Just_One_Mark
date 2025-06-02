@@ -14,7 +14,7 @@ import com.example.justonemark.data.entities.SentenceEntity
 
 @Database(
     entities = [ChapterEntity::class, SentenceEntity::class, QuestionEntity::class],
-    version = 1
+    version = 2
 )
 @TypeConverters(Converters::class)
 abstract class AppDatabase: RoomDatabase() {

@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="150dp"
     android:layout_height="240dp"
-    android:elevation="4dp">
+    android:layout_margin="8dp"
+    android:elevation="4dp"
+    app:cardCornerRadius="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -12,26 +14,31 @@
         android:padding="8dp">
 
         <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="wrap_content"
+            android:id="@+id/chapterImageView"
+            android:layout_width="match_parent"
             android:layout_height="165dp"
+            android:scaleType="centerCrop"
             app:srcCompat="@drawable/p1" />
 
         <TextView
+            android:id="@+id/chapterNumberTxt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chapter - 3" />
+            android:layout_marginTop="8dp"
+            android:text="Chapter - 3"
+            android:textSize="12sp"
+            android:textStyle="bold" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:id="@+id/chapterNameTxt"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Fluid Dynamics" />
+            android:layout_marginTop="4dp"
+            android:text="Fluid Dynamics"
+            android:textSize="14sp"
+            android:maxLines="2"
+            android:ellipsize="end" />
+
     </LinearLayout>
-
-
-
-
-
-
 
 </androidx.cardview.widget.CardView>
